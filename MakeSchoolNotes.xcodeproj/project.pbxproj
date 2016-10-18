@@ -16,6 +16,8 @@
 		2E4A07AF1C42F539007F415F /* Date+convertToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4A07AE1C42F539007F415F /* Date+convertToString.swift */; };
 		2E4A07B11C42F599007F415F /* ListNotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4A07B01C42F599007F415F /* ListNotesTableViewCell.swift */; };
 		848490D31D68F5610043C60B /* MakeSchoolNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 848490D11D68F5610043C60B /* MakeSchoolNotes.xcdatamodeld */; };
+		FA6FE99F1DB5AF31003B1278 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6FE99E1DB5AF31003B1278 /* CoreDataHelper.swift */; };
+		FA9F604B1DB1521100129376 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9F604A1DB1521100129376 /* Note.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +45,8 @@
 		2E4A07AE1C42F539007F415F /* Date+convertToString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+convertToString.swift"; sourceTree = "<group>"; };
 		2E4A07B01C42F599007F415F /* ListNotesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListNotesTableViewCell.swift; sourceTree = "<group>"; };
 		848490D21D68F5610043C60B /* MakeSchoolNotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MakeSchoolNotes.xcdatamodel; sourceTree = "<group>"; };
+		FA6FE99E1DB5AF31003B1278 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		FA9F604A1DB1521100129376 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Note.swift; path = Models/Note.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 				2E4A07931C42F3B0007F415F /* AppDelegate.swift */,
 				848490D11D68F5610043C60B /* MakeSchoolNotes.xcdatamodeld */,
 				2E4A07971C42F3B0007F415F /* Main.storyboard */,
+				FA9F604A1DB1521100129376 /* Note.swift */,
 				2E4A079A1C42F3B0007F415F /* Assets.xcassets */,
 				2E4A079C1C42F3B0007F415F /* LaunchScreen.storyboard */,
 				2E4A079F1C42F3B0007F415F /* Info.plist */,
@@ -117,6 +122,7 @@
 		2E4A07AC1C42F4EB007F415F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				FA6FE99E1DB5AF31003B1278 /* CoreDataHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -204,6 +210,8 @@
 			files = (
 				2E4A07B11C42F599007F415F /* ListNotesTableViewCell.swift in Sources */,
 				2E4A07AF1C42F539007F415F /* Date+convertToString.swift in Sources */,
+				FA6FE99F1DB5AF31003B1278 /* CoreDataHelper.swift in Sources */,
+				FA9F604B1DB1521100129376 /* Note.swift in Sources */,
 				2E4A07AB1C42F497007F415F /* DisplayNoteViewController.swift in Sources */,
 				2E4A07941C42F3B0007F415F /* AppDelegate.swift in Sources */,
 				2E4A07A91C42F40B007F415F /* ListNotesTableViewController.swift in Sources */,

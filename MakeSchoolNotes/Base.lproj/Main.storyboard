@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -51,7 +50,13 @@
                             <outlet property="delegate" destination="u2p-Xo-LIX" id="msW-Ug-yhm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Notes" id="hXY-KS-Zkr"/>
+                    <navigationItem key="navigationItem" title="Notes" id="hXY-KS-Zkr">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="3SD-1P-Jxf">
+                            <connections>
+                                <segue destination="vEY-Dn-lJy" kind="show" identifier="addNote" id="UqS-Ub-D8y"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dXi-TP-ue3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -75,7 +80,7 @@
             </objects>
             <point key="canvasLocation" x="562.39999999999998" y="266.71664167916043"/>
         </scene>
-        <!--Display Note View Controller-->
+        <!--Title-->
         <scene sceneID="itc-jy-Xr0">
             <objects>
                 <viewController id="vEY-Dn-lJy" customClass="DisplayNoteViewController" customModule="MakeSchoolNotes" customModuleProvider="target" sceneMemberID="viewController">
@@ -87,33 +92,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K1n-Hh-ahx">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D0s-uK-Kfj">
+                                <frame key="frameInset" minX="16" minY="72" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TS0-iN-YjW">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lu5-lf-zgR">
+                                <frame key="frameInset" minX="16" minY="110" width="343" height="537"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="K1n-Hh-ahx" firstAttribute="top" secondItem="ZOA-MO-gVY" secondAttribute="bottom" constant="10" id="Gkm-RK-pAW"/>
-                            <constraint firstItem="K1n-Hh-ahx" firstAttribute="leading" secondItem="TS0-iN-YjW" secondAttribute="leading" id="M1L-Cm-uaI"/>
-                            <constraint firstItem="K1n-Hh-ahx" firstAttribute="leading" secondItem="KNU-oG-jFd" secondAttribute="leadingMargin" id="d0l-44-Y9M"/>
-                            <constraint firstItem="TS0-iN-YjW" firstAttribute="top" secondItem="K1n-Hh-ahx" secondAttribute="bottom" constant="14" id="fRN-gk-5Dd"/>
-                            <constraint firstItem="K1n-Hh-ahx" firstAttribute="trailing" secondItem="TS0-iN-YjW" secondAttribute="trailing" id="fgu-WK-CRn"/>
-                            <constraint firstItem="K1n-Hh-ahx" firstAttribute="trailing" secondItem="KNU-oG-jFd" secondAttribute="trailingMargin" id="ota-G1-knt"/>
-                            <constraint firstAttribute="bottom" secondItem="TS0-iN-YjW" secondAttribute="bottom" constant="20" symbolic="YES" id="pTP-VC-SM5"/>
-                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="Wj2-Qv-dYp">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ftA-Dj-NUn">
+                            <connections>
+                                <segue destination="hGW-tQ-ok9" kind="unwind" identifier="Cancel" unwindAction="unwindToListNotesViewController:" id="71i-DQ-PdY"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="CAO-F7-ARb">
+                            <connections>
+                                <segue destination="hGW-tQ-ok9" kind="unwind" identifier="Save" unwindAction="unwindToListNotesViewController:" id="tV5-FW-ru9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="noteContentTextView" destination="lu5-lf-zgR" id="lIA-G0-pH7"/>
+                        <outlet property="noteTitleTextField" destination="D0s-uK-Kfj" id="0dC-Bi-8Mp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xXR-Ai-dxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="hGW-tQ-ok9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2174" y="267"/>
+            <point key="canvasLocation" x="2173.5999999999999" y="266.71664167916043"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="UqS-Ub-D8y"/>
+    </inferredMetricsTieBreakers>
 </document>
